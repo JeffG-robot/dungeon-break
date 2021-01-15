@@ -1,0 +1,25 @@
+/*Clock
+ * this program is a timer that can update time and tell how long had past after the last update
+ */
+public class Clock {
+  long lastTimeCheck; //last time update
+  long currentTime;    //current time
+  //constructor
+  Clock(){
+    lastTimeCheck=System.currentTimeMillis();
+  }
+  
+  /* upDate
+   * this method restart the counting
+   */
+  public void upDate(){
+    lastTimeCheck=System.currentTimeMillis();
+  }
+  /* timePast
+   * this method return the time past 
+   */
+  public int timePast(){
+    currentTime=System.currentTimeMillis();
+    return (int)(currentTime-lastTimeCheck);
+  }
+}

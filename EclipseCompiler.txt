@@ -1,0 +1,18 @@
+14 Jan 2021 16:50:56 GMT: Log 'EclipseCompiler.txt' opened: 14 Jan 2021 16:50:56 GMT with name C:\Users\Ruomu\Desktop\Drawings\dungeonbreak\java2\EclipseCompiler.txt
+14 Jan 2021 17:02:35 GMT: diagnostics = javax.tools.DiagnosticCollector@42d8327c
+fileManager = org.eclipse.jdt.internal.compiler.tool.EclipseFileManager@5a91ed27
+fileObjects = [C:\Users\Ruomu\Desktop\Drawings\fire emblem\comf\FinnalGame.java]
+14 Jan 2021 17:02:35 GMT: Calling 'org.eclipse.jdt.internal.compiler.tool.EclipseCompiler@6d3e7266' with options [-Xlint:deprecation, -Xlint:unchecked, -g, -classpath, C:\Users\Ruomu\Desktop\Drawings\fire emblem\comf;C:\Users\Ruomu\Desktop\drjava-beta-20160913-225446.exe]
+14 Jan 2021 17:02:35 GMT: Compiler call returned
+14 Jan 2021 17:02:35 GMT: Processing diagnostic org.eclipse.jdt.internal.compiler.tool.EclipseCompilerImpl$3$2@149e9f6a
+14 Jan 2021 17:02:35 GMT:  Kind = WARNING
+14 Jan 2021 17:02:35 GMT: Name = C:\Users\Ruomu\Desktop\Drawings\fire emblem\comf\FinnalGame.java LineNo = 314 ColNo = 9 Msg = 'The serializable class drawPanel does not declare a static final serialVersionUID field of type long'
+14 Jan 2021 17:02:35 GMT: Processing diagnostic org.eclipse.jdt.internal.compiler.tool.EclipseCompilerImpl$3$2@19e9de28
+14 Jan 2021 17:02:35 GMT:  Kind = WARNING
+14 Jan 2021 17:02:35 GMT: Name = C:\Users\Ruomu\Desktop\Drawings\fire emblem\comf\FinnalGame.java LineNo = 26 ColNo = 14 Msg = 'The serializable class FinnalGame does not declare a static final serialVersionUID field of type long'
+14 Jan 2021 17:02:35 GMT: Processing diagnostic org.eclipse.jdt.internal.compiler.tool.EclipseCompilerImpl$3$2@79ec67b0
+14 Jan 2021 17:02:35 GMT:  Kind = WARNING
+14 Jan 2021 17:02:35 GMT: Name = C:\Users\Ruomu\Desktop\Drawings\fire emblem\comf\FinnalGame.java LineNo = 138 ColNo = 11 Msg = 'The value of the local variable port is not used'
+14 Jan 2021 17:02:35 GMT: Processing diagnostic org.eclipse.jdt.internal.compiler.tool.EclipseCompilerImpl$3$2@541a2ffa
+14 Jan 2021 17:02:35 GMT:  Kind = WARNING
+14 Jan 2021 17:02:35 GMT: Name = C:\Users\Ruomu\Desktop\Drawings\fire emblem\comf\FinnalGame.java LineNo = 139 ColNo = 14 Msg = 'The value of the local variable address is not used'

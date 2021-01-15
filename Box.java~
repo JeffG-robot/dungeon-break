@@ -1,0 +1,98 @@
+/*Box
+ * this program is a abstract class of the player, enemy, and boss
+ */
+import java.awt.*;
+public abstract class Box {
+  private int health;  //health of the object
+  private double x;
+  private double y;
+  private int length;
+  private int width;
+  private Rectangle boundingBox;
+  private  int shootBulletNumber;
+  private  double bulletSpeed;
+  private  double bulletAngle;
+  private  int coolDownTime;
+  private double movementSpeed;
+  /*attact
+   * this methord is a abstract method of attack
+   */
+  public abstract void attack();
+  
+  //getter
+  public int getHealth(){
+    return health;
+  }
+  public int getWidth(){
+    return width;
+  }
+  public int getLength(){
+    return length;
+  }
+  public double getMovementSpeed(){
+    return movementSpeed;
+  }
+   public Rectangle getBoundingBox(){
+    return boundingBox;
+  }
+  public double getX(){
+    return x;
+  }
+  public double getY(){
+    return y;
+  }
+  public int getShootBulletNumber(){
+    return shootBulletNumber;
+  }
+  public double getBulletSpeed(){
+    return bulletSpeed;
+  }
+  public double getBulletAngle(){
+    return bulletAngle;
+  }
+  public int getCoolDownTime(){
+    return coolDownTime;
+  }
+  //setter
+  public void setHealth(int health){
+    this.health=health;
+  }
+  public void setBoundingBox( Rectangle boundingBox){
+    this.boundingBox=boundingBox;
+  }
+  public void setBulletSpeed(double bulletSpeed){
+    this.bulletSpeed=bulletSpeed;
+  }
+  public void setBulletAngle(double bulletAngle){
+    this.bulletAngle=bulletAngle;
+  }
+  public void setCoolDownTime(int coolDownTime){
+    this.coolDownTime=coolDownTime;
+  }
+  public void setMovementSpeed(double movementSpeed){
+    this.movementSpeed=movementSpeed;
+  }
+  public void setBoundingBox(int x, int y){
+    boundingBox.x=x;
+    boundingBox.y=y;
+  }
+   public void setShootBulletNumber(int shootBulletNumber){
+    this.shootBulletNumber=shootBulletNumber;
+  }
+  public void setY(double y){
+    boundingBox.y=(int)y;
+    this.y=y;
+  }
+  public void setX(double x){
+    boundingBox.x=(int)x;
+    this.x=x;
+  }
+  
+  public void setWidth(int width){
+    this.width=width;
+  }
+  public void setLength(int length){
+    this.length=length;
+  }
+  
+}

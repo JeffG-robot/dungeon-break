@@ -1,0 +1,92 @@
+
+
+import java.awt.*;
+public class Player extends Box {
+  private Clock coolDown;     //clock for the cooldown time of each shoot
+  private double randomAngle;  //add a random  angle to the angle of the bullet
+   private double currentSpeed;  //current speed of the movement
+     private int bombNumber;      //number of bomb
+     //constructor
+   Player(double x, double y,  int health,  int shootBulletNumber,double bulletSpeed, double bulletChangeAngle, int coolDownTime, double movementSpeed, int bombNumber){
+    super.setBoundingBox(new Rectangle((int)x, (int)y, 5, 5));
+    super.setX(x);
+    super.setY(y);
+    super.setMovementSpeed(movementSpeed);
+    super.setLength(5);
+    super.setWidth(5);
+    super.setHealth(health);
+    super.setShootBulletNumber(shootBulletNumber);
+    super.setBulletSpeed(bulletSpeed);
+    super.setBulletAngle(bulletChangeAngle);
+    super.setCoolDownTime(coolDownTime);
+    coolDown=new Clock();
+    this.bombNumber=bombNumber;
+   }
+   
+   
+   
+   
+   
+   //getter
+   public double getCurrentSpeed(){
+   return currentSpeed;
+   }
+ public int getBombNumber(){
+     return bombNumber;
+   }
+ //setter
+  public void setBombNumber(int bombNumber){
+    this.bombNumber=bombNumber;
+   }
+  
+  /*bomb
+  * this method place a bomb
+  */
+   public void bomb(){
+     if(bombNumber>0){
+   DungeonBreak.bulletArray.clear();
+   bombNumber--;
+     }
+   }
+   
+  /*changeCurrentSpeed
+  * this method change the current speed of the player
+  */
+   public void changeCurrentSpeed(){
+     if (DungeonBreak.shiftKey == true) {
+        //change speed
+        currentSpeed=DungeonBreak.player.getMovementSpeed()/2;
+        //else
+      }else{
+        //current speed == speed
+        currentSpeed=DungeonBreak.player.getMovementSpeed();
+        //end if
+      }
+      
+      //if number of keys pressed is 2
+      if(DungeonBreak.nKey==2){
+        //change current speed
+        currentSpeed=Math.sqrt(  Math.pow(currentSpeed, 2)/2   );
+        //end if
+      }
+   }
+   
+   /*attack
+  * this method let player attack
+  */
+   public void attack(){
+     //if cool down time past
+     if(coolDown.timePast()>=super.getCoolDownTime()){
+       coolDown.upDate();
+        
+           //point - 0.2
+           GameMain.point=GameMain.point-0.2;
+           //shoot bullet
+           for(int i=0;i<super.getShootBulletNumber();i++){
+             randomAngle=Math.random()*getBulletAngle()*2-getBulletAngle();
+             (DungeonBreak.bulletArray).add(new BulletType1((super.getX()+super.getWidth()/2)-5, super.getY()+super.getLength()/2-5,MouseInfo.getPointerInfo().getLocation().getX()-9+(int)super.getX()-(int)DungeonBreak.maxx/2,MouseInfo.getPointerInfo().getLocation().getY()-29+(int)super.getY()-(int)DungeonBreak.maxy/2,10, 10, super.getBulletSpeed(),randomAngle, true, 3000));
+           }
+     }
+     
+   }
+}
